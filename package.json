@@ -1,0 +1,25 @@
+{
+  "name": "quick-bundle-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel index.html",
+    "start-multiple-entries": "parcel index.html centered.html what.html ",
+    "build": "parcel build index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexangria1992/quick-parcel-project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alexangria1992/quick-parcel-project/issues"
+  },
+  "homepage": "https://github.com/alexangria1992/quick-parcel-project#readme",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4"
+  }
+}
