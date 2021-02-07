@@ -1,0 +1,267 @@
+@charset "UTF-8";
+/*─────────────────────────────────────────────────────────────────────────────────────────────────*/
+/*─────────────────────────────────────────────────────────────────────────────────────────────────*/
+/*─
+/*─                                                                                      RESET
+/*─
+/*─────────────────────────────────────────────────────────────────────────────────────────────────*/
+/*─────────────────────────────────────────────────────────────────────────────────────────────────*/
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: none;
+  /*─ Debug font size on iphone when landscape orientation ─*/
+  -webkit-font-smoothing: subpixel-antialiased;
+  /*─ Debug safari font weight when fixed element on the page ─*/
+  -webkit-font-smoothing: antialiased;
+  /*─ idem : Debug safari font weight when fixed element on the page ─*/
+}
+
+html, body, nav, header, footer, div, span,
+h1, h2, h3, p,
+a, img,
+ul, li,
+table, form, label, input, textarea, select, button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  list-style: none;
+}
+
+input, textarea, select, button {
+  display: block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 0;
+  outline: none;
+  border: none;
+  background: none;
+  color: inherit;
+}
+
+input:focus,
+textarea:focus,
+button:focus {
+  outline: none;
+}
+
+input[type='submit']:hover,
+button:hover {
+  cursor: pointer;
+}
+
+input::-ms-clear {
+  display: none;
+  /*─ IE11 → remove cross to close ─*/
+}
+
+textarea {
+  overflow: auto;
+  /*─ Hide scroll bar on IE ─*/
+}
+
+a {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+img, video, svg, picture {
+  display: block;
+}
+
+img, video {
+  width: 100%;
+  height: auto;
+}
+
+svg {
+  width: 100%;
+  height: 100%;
+}
+
+iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: 'SanFrancisco';
+  font-size: 16px;
+}
+
+.container {
+  padding: 0 32px;
+  max-width: 1288px;
+  width: 100%;
+  margin: auto;
+}
+
+@media (max-width: 750px) {
+  .container {
+    padding: 0 24px;
+  }
+}
+
+footer {
+  height: 170px;
+}
+
+.q-hero {
+  background: #151b28;
+  color: white;
+  padding-top: 41px;
+  height: 98vh;
+}
+
+.q-hero__logo {
+  width: 158px;
+}
+
+.q-hero__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.q-hero__text {
+  max-width: 478px;
+  margin-right: 78px;
+}
+
+.q-hero__text h1 {
+  font-family: hk_grotesk;
+  font-weight: 800;
+  font-size: 46px;
+  line-height: 110%;
+  color: #FFFFFF;
+  margin-bottom: 24px;
+}
+
+.q-hero__text .q-hero__headline {
+  font-family: hk_grotesk;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 140%;
+  margin-bottom: 24px;
+}
+
+.q-hero__text .q-hero__summary {
+  font-weight: normal;
+  font-size: 16px;
+  color: #8686B3;
+  margin-bottom: 48px;
+}
+
+.q-hero__images {
+  min-width: 550px;
+}
+
+.q-hero__ctas {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 24px;
+}
+
+.q-hero__ctas .q-btn:first-child {
+  margin-right: 24px;
+}
+
+.q-btn {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0px 16px;
+  height: 39px;
+  border-radius: 3px;
+  color: white;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 150%;
+}
+
+.q-btn img {
+  margin-right: 8px;
+}
+
+.q-btn--github {
+  background: #45465B;
+}
+
+.q-btn--github img {
+  width: 19px;
+}
+
+.q-btn--discord {
+  background: #6578CB;
+}
+
+.q-btn--discord img {
+  width: 16px;
+}
+
+@font-face {
+  font-family: 'hk_grotesk';
+  src: url("/assets/fonts/hk-grotesk/hkgrotesk-bold-webfont.woff2") format("woff2"), url("/assets/fonts/hk-grotesk/hkgrotesk-bold-webfont.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'hk_grotesk';
+  src: url("/assets/fonts/hk-grotesk/hkgrotesk-regular-webfont.woff2") format("woff2"), url("/assets/fonts/hk-grotesk/hkgrotesk-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/** San Francisco which is used for the platform **/
+@font-face {
+  font-family: "SanFrancisco";
+  src: url("/assets/fonts/san-francisco/SF-UI-Text-Regular.otf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "SanFrancisco";
+  src: url("/assets/fonts/san-francisco/SF-UI-Text-Medium.otf");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "SanFrancisco";
+  src: url("/assets/fonts/san-francisco/SF-UI-Text-Semibold.otf");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "SanFrancisco";
+  src: url("/assets/fonts/san-francisco/SF-UI-Text-Bold.otf");
+  font-weight: 700;
+}
+/*# sourceMappingURL=styles.css.map */

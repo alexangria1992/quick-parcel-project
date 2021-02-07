@@ -1,0 +1,70 @@
+.q-hero 
+{
+    background: #151b28;
+    color: white;
+    padding-top: 41px;
+    height: 98vh;
+}
+
+.q-hero__logo 
+{
+    width: 158px;
+    // margin-bottom: 128px;
+}
+
+.q-hero__content 
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.q-hero__text 
+{
+    max-width: 478px;
+    margin-right: 78px;
+    h1 
+    {
+        font-family: hk_grotesk;
+        font-weight: 800;
+        font-size: 46px;
+        line-height: 110%;
+        color: #FFFFFF;
+        margin-bottom: 24px;
+    }
+    .q-hero__headline 
+    {
+        
+        font-family: hk_grotesk;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 25px;
+        line-height: 140%;
+        margin-bottom: 24px;
+  
+    }
+
+    .q-hero__summary 
+    {
+        font-weight: normal;
+        font-size: 16px;
+        color: #8686B3;
+        margin-bottom: 48px;
+    }
+}
+
+.q-hero__images
+{
+    min-width: 550px;
+}
+
+.q-hero__ctas 
+{
+    display: flex;
+    gap: 24px;
+
+    .q-btn:first-child 
+    {
+        margin-right: 24px;
+    }
+}
