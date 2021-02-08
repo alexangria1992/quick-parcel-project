@@ -13,7 +13,10 @@
   "name": "quick-bundle-project",
   "version": "1.0.0",
   "main": "index.js",
-  "dependencies": {},
+  "dependencies": {
+    "got": "^11.8.1",
+    "http2": "^3.3.7"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/alexangria1992/quick-parcel-project.git"
