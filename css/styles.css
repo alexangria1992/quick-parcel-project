@@ -103,6 +103,7 @@ iframe {
 body {
   font-family: 'SanFrancisco';
   font-size: 16px;
+  background: #F9F9FD;
 }
 
 .container {
@@ -123,10 +124,9 @@ footer {
 }
 
 .q-hero {
-  background: #151b28;
+  background: #151B28;
   color: white;
-  padding-top: 41px;
-  height: 98vh;
+  padding-top: 80px;
 }
 
 .q-hero__logo {
@@ -137,9 +137,9 @@ footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -148,6 +148,11 @@ footer {
 .q-hero__text {
   max-width: 478px;
   margin-right: 78px;
+  opacity: 0;
+  -webkit-animation: HeroSlideIn 1s forwards .2s ease;
+          animation: HeroSlideIn 1s forwards .2s ease;
+  font-size: 0;
+  will-change: transform, opacity, box-size;
 }
 
 .q-hero__text h1 {
@@ -179,22 +184,26 @@ footer {
 }
 
 .q-hero__text .q-hero__summary {
-  font-weight: normal;
   font-size: 16px;
   color: #8686B3;
   margin-bottom: 48px;
+  line-height: 150%;
 }
 
 .q-hero__images {
-  min-width: 550px;
+  max-width: 550px;
   position: relative;
+  -webkit-animation: HeroWrapperSlideIn 1.3s forwards .8s;
+          animation: HeroWrapperSlideIn 1.3s forwards .8s;
+  will-change: transform, opacity, box-size;
 }
 
 .q-hero__images .q-hero__illu {
   position: relative;
   opacity: 0;
-  -webkit-animation: HeroSlideIn 0.9s forwards;
-          animation: HeroSlideIn 0.9s forwards;
+  -webkit-animation: HeroSlideIn .9s forwards .8s;
+          animation: HeroSlideIn .9s forwards .8s;
+  will-change: transform, opacity, box-size;
 }
 
 .q-hero__images .q-hero__illu--1 {
@@ -204,17 +213,63 @@ footer {
 .q-hero__images .q-hero__illu--2 {
   z-index: 9;
   margin-top: -15%;
-  margin-left: 3%;
-  -webkit-animation-delay: .3s;
-          animation-delay: .3s;
+  -webkit-animation-delay: .7s;
+          animation-delay: .7s;
 }
 
 .q-hero__images .q-hero__illu--3 {
   z-index: 8;
   margin-top: -12%;
-  margin-left: 4%;
-  -webkit-animation-delay: .6s;
-          animation-delay: .6s;
+  -webkit-animation-delay: .9s;
+          animation-delay: .9s;
+}
+
+.q-hero__images .q-hero__illu.q-hero__illu--dashes {
+  position: absolute;
+  -webkit-animation: FadeIn 1s forwards 1.1s;
+          animation: FadeIn 1s forwards 1.1s;
+  opacity: 0;
+  top: -6%;
+}
+
+@-webkit-keyframes FadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes FadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes HeroWrapperSlideIn {
+  0% {
+    -webkit-transform: translateY(-1%);
+            transform: translateY(-1%);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes HeroWrapperSlideIn {
+  0% {
+    -webkit-transform: translateY(-1%);
+            transform: translateY(-1%);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
 }
 
 @-webkit-keyframes HeroSlideIn {
@@ -253,6 +308,26 @@ footer {
   margin-right: 24px;
 }
 
+@media screen and (max-width: 750px) {
+  .q-hero__images {
+    display: none;
+  }
+  .q-hero__logo {
+    margin-bottom: 32px;
+  }
+  .q-hero__text {
+    margin-right: 0;
+  }
+  .q-hero__text h1 {
+    display: block;
+  }
+  .q-hero__text h1 span {
+    display: block;
+    margin-top: 24px;
+    margin-left: 0;
+  }
+}
+
 .q-btn {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -287,6 +362,102 @@ footer {
 
 .q-btn--discord img {
   width: 16px;
+}
+
+.q-how {
+  max-width: 924px;
+  margin: auto;
+  padding: 96px 32px;
+  text-align: center;
+}
+
+.q-how h1 {
+  font-family: hk_grotesk;
+  font-weight: 800;
+  font-size: 32px;
+  line-height: 110%;
+  color: #45465B;
+  margin-bottom: 24px;
+}
+
+.q-how p {
+  font-size: 16px;
+  line-height: 150%;
+  color: #45465B;
+  margin-bottom: 32px;
+}
+
+.q-usage {
+  max-width: 1064px;
+  margin: auto;
+  padding: 8 32px;
+}
+
+.q-usage h1 {
+  font-family: hk_grotesk;
+  font-weight: 800;
+  font-size: 32px;
+  line-height: 110%;
+  color: #45465B;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.q-usage p {
+  font-size: 16px;
+  line-height: 150%;
+  color: #45465B;
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.q-usage__head {
+  background: url("/assets/img/bg.svg") no-repeat bottom;
+  background-size: 100%;
+  padding-bottom: 100px;
+}
+
+.q-usage__code-wrapper {
+  padding: 24px;
+  background: white;
+  -webkit-box-shadow: 8 2px 2px rgba(0, 0, 0, 0.85);
+          box-shadow: 8 2px 2px rgba(0, 0, 0, 0.85);
+  border-radius: 3px;
+  margin-bottom: 48px;
+}
+
+.q-usage__code-wrapper .q-tag {
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 158%;
+  text-transform: uppercase;
+  color: white;
+  background: #5D64D2;
+  border-radius: 3px;
+  padding: 4px 8px;
+  margin-bottom: 24px;
+  display: inline-block;
+}
+
+.q-usage__code-wrapper pre {
+  overflow: auto;
+  margin: 0;
+}
+
+.q-usage__ctas {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.q-usage__ctas .q-btn:first-child {
+  margin-right: 24px;
 }
 
 @font-face {
@@ -326,5 +497,25 @@ footer {
   font-family: "SanFrancisco";
   src: url("/assets/fonts/san-francisco/SF-UI-Text-Bold.otf");
   font-weight: 700;
+}
+
+@font-face {
+  font-family: "HackRegular";
+  src: url("/assets/fonts/hack/Hack-Regular.ttf");
+}
+
+@font-face {
+  font-family: "HackBold";
+  src: url("/assets/fonts/hack/Hack-Bold.ttf");
+}
+
+@font-face {
+  font-family: "HackBoldItalic";
+  src: url("/assets/fonts/hack/Hack-BoldItalic.ttf");
+}
+
+@font-face {
+  font-family: "HackItalic";
+  src: url("/assets/fonts/hack/Hack-Italic.ttf");
 }
 /*# sourceMappingURL=styles.css.map */
